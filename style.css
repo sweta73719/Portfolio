@@ -265,11 +265,12 @@
             overflow: hidden;
             border-top-right-radius: 111px;
             border-bottom-left-radius: 111px;
-            height: 500px;
-            width: 400px;
+            height: 300px;
+            width: 200px;
             display: flex;
             justify-content: center;
             align-items: center;
+            box-shadow: 2px -1px 20px 13px red;
         }
 
         .image-bin img {
@@ -301,15 +302,15 @@
 
             .image-bin {
                 width: 100%;
-                max-width: 400px;
+                max-width: 200px;
                 /* Maintains the width limit */
-                height: 400px;
+                height: 250px;
                 /* You can adjust this for mobile if needed */
             }
 
             .biography {
                 width: 100%;
-                max-width: 500px;
+                max-width: 300px;
                 padding: 30px;
                 /* Reduced padding for mobile */
             }
