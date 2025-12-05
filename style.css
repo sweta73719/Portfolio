@@ -1,0 +1,241 @@
+        :root {
+            --primary-color: white;
+            --secondary-color: black;
+            --third-color: #2d2d2d;
+            --fourth-color: gray;
+            --box-shadow: 5px 5px 15px gray;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--third-color);
+        }
+
+        #header {
+            background-image: url(assets/background-image.jpg);
+            background-repeat: no-repeat;
+            height: 80vh;
+            background-position: center center;
+            background-size: max(1200px, 100vw);
+            position: relative;
+        }
+
+        .box {
+            height: 80vh;
+            width: 100%;
+            background-color: black;
+            opacity: 0.7;
+            position: absolute;
+            top: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 130vh;
+            margin: 0 auto;
+            height: 62px;
+            position: relative;
+            width: 100%;
+            padding: 0 20px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .title-name {
+            color: red;
+            z-index: 10;
+            font-size: 50px;
+            font-family: "Martel Sans", unset;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .nav-menu {
+            list-style: none;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            color: white;
+            border: 1px solid red;
+            display: inline-block;
+            background-color: red;
+            padding: 2px 16px;
+            margin: 0 5px;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            width: 80px;
+            margin-right: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu li:hover {
+            background-color: #db0000;
+            transform: translateY(-2px);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+            z-index: 1000;
+            position: relative;
+        }
+
+        .menu-toggle i {
+            color: red;
+            font-size: 32px;
+        }
+
+        .hero {
+            height: calc(100% - 62px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: var(--primary-color);
+            position: relative;
+            gap: 23px;
+            padding: 0 30px;
+        }
+
+        #name {
+            font-size: 60px;
+            color: white;
+        }
+
+        .first-name {
+            font-size: 78px;
+        }
+
+        .last-name {
+            font-size: 50px;
+            color: red;
+        }
+
+        #bin {
+            font-size: 20px;
+            color: #db0000;
+            word-spacing: 5px;
+            font-family: "Martel Sans", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        .bin-box {
+            font-family: "Martel Sans", unset;
+        }
+
+        /* Responsive styles for 795px and below */
+        @media screen and (max-width: 795px) {
+            nav {
+                flex-wrap: wrap;
+                padding: 0 15px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 62px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
+                padding: 20px 0;
+                z-index: 999;
+                animation: slideDown 0.3s ease;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                margin: 10px 0;
+                width: 90%;
+                max-width: 200px;
+                padding: 10px 0;
+                margin-right: 0;
+            }
+
+            .title-name {
+                font-size: 40px;
+            }
+
+            #name {
+                font-size: 50px;
+                text-align: center;
+            }
+
+            .first-name {
+                font-size: 65px;
+            }
+
+            .last-name {
+                font-size: 42px;
+            }
+
+            #bin {
+                font-size: 18px;
+                text-align: center;
+            }
+
+            .bin-box {
+                text-align: center;
+                padding: 0 20px;
+            }
+        }
+
+        /* Animation for menu dropdown */
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* For very small screens */
+        @media screen and (max-width: 480px) {
+            .title-name {
+                font-size: 32px;
+            }
+
+            #name {
+                font-size: 40px;
+            }
+
+            .first-name {
+                font-size: 52px;
+            }
+
+            .last-name {
+                font-size: 34px;
+            }
+
+            #bin {
+                font-size: 16px;
+            }
+        }
