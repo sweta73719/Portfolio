@@ -1,28 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Playwrite+US+Trad+Guides&family=Science+Gothic:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Playwrite+US+Trad+Guides&family=Science+Gothic:wght@100..900&display=swap"
+        rel="stylesheet">
     <style>
-        :root{
+        :root {
             --primary-color: white;
             --secondary-color: black;
             --third-color: #2d2d2d;
             --fourth-color: gray;
             --box-shadow: 5px 5px 15px gray;
-        
         }
-        *{
-            margin: 0px;
-            padding: 0px;
+
+        * {
+            margin: 0;
+            padding: 0;
         }
+
         body {
             background-color: var(--third-color);
         }
+
+        #header {
+            background-image: url(assets/background-image.jpg);
+            background-repeat: no-repeat;
+            height: 80vh;
+            background-position: center center;
+            background-size: max(1200px, 100vw);
+            position: relative;
+        }
+
+        .box {
+            height: 80vh;
+            width: 100%;
+            background-color: black;
+            opacity: 0.7;
+            position: absolute;
+            top: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* gap: 50px; */
+            max-width: 130vh;
+            margin: 0 auto;
+            height: 62px;
+            position: relative;
+            width: 100%;
+            padding: 0 20px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .title-name {
+            color: red;
+            z-index: 10;
+            font-size: 50px;
+            font-family: "Martel Sans", unset;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        ul {
+            list-style: none;
+            z-index: 10;
+        }
+
+        ul li {
+            color: white;
+            border: 1px solid red;
+            display: inline-block;
+            background-color: red;
+            padding: 2px 16px;
+            margin: 0 5px;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            width: 80px;
+            margin-right: 10px;
+            text-align: center;
+        }
+
+        .hero {
+            height: calc(100% - 62px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: var(--primary-color);
+            position: relative;
+            gap: 23px;
+            padding: 0 30px;
+        }
+
+        #name {
+            font-size: 60px;
+            color: white;
+        }
+
+        .first-name {
+            font-size: 78px;
+        }
+
+        .last-name {
+            font-size: 50px;
+            color: red;
+        }
+
+        #bin {
+            font-size: 20px;
+            color: #db0000;
+            word-spacing: 5px;
+            font-family: "Martel Sans", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+        }
+        .bin-box {
+            font-family: "Martel Sans", unset;
+        }
     </style>
 </head>
+
 <body>
-    
+    <div id="header">
+        <div class="box">
+            <nav>
+                <div class="title-name">PORFOLIO</div>
+                <ul>
+                    <li>Home</li>
+                    <li>Education</li>
+                    <li>Skill</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero">
+            <span id="name" class="first-name">Sweta <span class="last-name">Choudhary</span></span>
+
+            <span id="bin">Innocent, Cutness, Smart, Introvert</span>
+            <span class="bin-box">
+                The Site is dedicated to a Girl Named Sweta Kumari Choudhary.. <span style="color: red;">Scroll Down For more information</span>
+            </span>
+        </div>
+    </div>
+
 </body>
+
 </html>
