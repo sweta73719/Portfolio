@@ -248,4 +248,43 @@
             background-color: gray;
             box-shadow: -1px 0px 20px 1px gray;
             position: relative;
+            margin-bottom: 40px;
+        }
+
+        .image-container {
+            /* border: 1px solid red; */
+            height: 434px;
+            width: 80vw;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            /* padding: 10px; */
+            align-items: center;
+            align-content: center;
+        }
+
+        .image-box {
+            /* border: 1px solid red; */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .image1 {
+            height: 300px;
+            width: 600px;
+            display: flex;
+            object-fit: fill;
+        }
+        .image2 {
+            height: 350px;
+            width: 700px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .image3 {
+            height: 300px;
+            width: 600px;
         }
