@@ -278,13 +278,42 @@
             display: flex;
             object-fit: fill;
         }
+
         .image2 {
             height: 350px;
             width: 700px;
             margin-left: 20px;
             margin-right: 20px;
         }
+
         .image3 {
             height: 300px;
             width: 600px;
+        }
+
+        .button-google-drive {
+            display: flex;
+            justify-content: center;
+
+            /* border: 1px solid red; */
+        }
+
+        .button-google-drive a button {
+            height: 48px;
+            /* width: 70vw; */
+            width: 300px;
+            color: white;
+            border-radius: 5px;
+            font-weight: 600;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: red;
+            border: 1px solid red;
+            letter-spacing: 5px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .button-google-drive a button {
+                width: 70vw;
+            }
         }
